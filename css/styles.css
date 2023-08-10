@@ -36,13 +36,16 @@ body::-webkit-scrollbar-thumb {
 	width: 80%;
 	margin: 0 auto 0 auto;
 }
+.mandatory{
+	min-height: 100vh;
+  	width: 100%;
+}
 
 /* HEADER */
 #logo{
 	position: fixed;
-	left: 2.2%;
-	top: 3%;
 	z-index: 3;
+	margin: 1rem auto 0 1rem;
 }
 #logo button{
 	color: var(--blueColor);
@@ -55,7 +58,6 @@ body::-webkit-scrollbar-thumb {
 	transition: ease-in-out 0.3s;
 }
 #logo button:hover{
-	transition: ease-in-out 0.3s;
 	background-color: #133040;
 }
 #left-bar{
@@ -69,7 +71,6 @@ body::-webkit-scrollbar-thumb {
 }
 #left-bar a img{
 	height: 35px;
-	transition: ease-in-out 1s;
 }
 #right-bar{
 	display: flex;
@@ -92,9 +93,8 @@ body::-webkit-scrollbar-thumb {
 
 .linia-vertical{
 	content: "";
-    display: block;
     width: 2px;
-    height: 150px;
+    height: 550px;
     margin: 0px auto;
     background-color: var(--greyColor);
 }
@@ -104,24 +104,22 @@ body::-webkit-scrollbar-thumb {
 
 
 #barra{
-	width: 95%;
-	margin: 0 auto 1rem 3rem;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+	min-width: 95%;
+	margin: 0 auto auto 3rem; /* top | right | bottom | left */
+	display: flex;
+	justify-content: right;
+	align-items: center;
 	height: 10vh;
 	position: fixed;
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(100px);
 	z-index: 2;
-}
-#barra a{
-    text-decoration: none;
 }
 .navegacion{
 	font-family: var(--fontTerminal);
 	font-size: 1.3rem;
 }
 .navegacion a{
+	text-decoration: none;
 	padding-right: 3rem;
 	color: var(--greyColor);
 	transition: ease-in-out 0.8s;
@@ -147,7 +145,6 @@ body::-webkit-scrollbar-thumb {
 .navegacion button:hover{
 	transition: ease-in-out 0.3s;
 	background-color: #133040;
-
 }
 
 
@@ -156,17 +153,15 @@ body::-webkit-scrollbar-thumb {
 
 
 .inicio{
-	height: 90vh;
 	display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.textoInicio, #avatar{
-	position: absolute;
+	padding-top: 2rem;
+	height: 100%;
 }
 .textoInicio{
-	width : 50%;
-	padding-left: 10rem;
+	width : 30%;
+	padding-left: 6rem;
 	z-index: 1;
 }
 .blueTerminal2{
@@ -197,22 +192,26 @@ body::-webkit-scrollbar-thumb {
 	line-height: 3rem;
 }
 #avatar{
-	/* height: 100%; */
-	width: 90%;
+	width: 70%;
 	opacity: 0.98;
 	text-align: right;
-	scale: 85%;
+	scale: 90%;
 }
-/* #avatar img{
-	box-shadow: 0px 2px 30px 10px rgba(0,0,0,0.2);
-}  */
-
+#avatar img{
+	border-radius: 50%;
+}
+.next_section{
+	position: absolute;
+	top: 95%;
+	left: 50%;
+}
 
 
 
 
 .whoami{
 	width: 65%;
+	height: 100%;
 	margin: 20rem auto;
 	background-color: red;
 	font-family: var(--fontTerminal);

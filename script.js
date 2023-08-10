@@ -1,5 +1,13 @@
 'use strict'
 
 $(document).ready(function() {
-    $(".inicio").css("background", "#081426")
+    $("#barra").css("background", "grey")
+    $("#avatar").css("background", "blue")
+    $(".textoInicio").css("background", "green")
+    $(".inicio").css("background", "red")
+    $(".contenedor").css("background", "yellow")
+    $(".inicio").SnapScroll();
+    // $(".next_section").click(function(){
+    //     $(".whoami").scrollIntoView();
+    // })
 })
